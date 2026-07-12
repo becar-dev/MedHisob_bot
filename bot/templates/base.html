@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4;
+        margin: 14mm 16mm;
+    }
+    * { box-sizing: border-box; }
+    body {
+        font-family: 'DejaVu Sans', Arial, sans-serif;
+        color: #17202A;
+        font-size: 11px;
+        margin: 0;
+    }
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3mm;
+        padding-bottom: 2.5mm;
+        border-bottom: 1.5px solid #2E86C1;
+    }
+    .header-qr-group {
+        display: flex;
+        gap: 3mm;
+    }
+    .header-qr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header-qr img.qr {
+        width: 16mm;
+        height: auto;
+    }
+    .header-qr .qr-label {
+        font-size: 6.5px;
+        color: #5D6D7E;
+        margin-top: 0.5mm;
+    }
+    .header-center {
+        text-align: center;
+    }
+    .header-center img.logo {
+        width: 26mm;
+    }
+    .header-right {
+        text-align: right;
+        font-size: 8.5px;
+        color: #5D6D7E;
+        line-height: 1.6;
+        max-width: 42mm;
+    }
+    .header-right .org-name {
+        font-size: 9.5px;
+        font-weight: bold;
+        color: #1A5276;
+        margin-bottom: 1mm;
+    }
+    .header-right .phone {
+        font-weight: bold;
+        color: #1A5276;
+    }
+    .title {
+        text-align: center;
+        background: #1A5276;
+        color: #ffffff;
+        padding: 7px 0;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        border-radius: 3px;
+    }
+    .subtitle {
+        text-align: center;
+        color: #1A5276;
+        font-size: 11px;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    .extra-line {
+        text-align: center;
+        color: #2E86C1;
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    table.info {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5mm;
+    }
+    table.info th {
+        background: #2E86C1;
+        color: #ffffff;
+        padding: 6px 8px;
+        text-align: left;
+        font-size: 10px;
+    }
+    table.info td {
+        border: 1px solid #BFC9CA;
+        padding: 5px 8px;
+        background: #D6EAF8;
+        width: 50%;
+    }
+    table.info td.label {
+        font-weight: bold;
+        color: #1A5276;
+        width: 45mm;
+    }
+    table.results {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 5mm;
+    }
+    table.results th {
+        background: #2E86C1;
+        color: #ffffff;
+        padding: 6px 6px;
+        font-size: 10px;
+        border: 1px solid #BFC9CA;
+        text-align: left;
+    }
+    table.results td {
+        border: 1px solid #BFC9CA;
+        padding: 5px 6px;
+        font-size: 9.5px;
+        vertical-align: top;
+    }
+    table.results tr:nth-child(even) td {
+        background: #F2F3F4;
+    }
+    .signature {
+        margin-top: 5mm;
+        font-size: 10px;
+    }
+    .warning {
+        margin-top: 4mm;
+        background: #FEF9E7;
+        border: 1px solid #F7DC6F;
+        padding: 6px 10px;
+        font-size: 8.5px;
+    }
+    .footer-meta {
+        text-align: center;
+        font-size: 8px;
+        color: #7B8A8B;
+        margin-top: 4mm;
+    }
+</style>
+</head>
+<body>
+    <div class="header-bar">
+        <div class="header-qr-group">
+            <div class="header-qr">
+                <img class="qr" src="{{ instagram_qr_path }}">
+                <span class="qr-label">Instagram</span>
+            </div>
+            <div class="header-qr">
+                <img class="qr" src="{{ telegram_qr_path }}">
+                <span class="qr-label">Telegram</span>
+            </div>
+        </div>
+        <div class="header-center">
+            <img class="logo" src="{{ logo_path }}">
+        </div>
+        <div class="header-right">
+            <div class="org-name">Respublika bolalar ortopediya markazi</div>
+            {{ org_address }}<br>
+            {% for phone in org_phones %}
+            <span class="phone">{{ phone }}</span>{% if not loop.last %}<br>{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="title">{{ title }}</div>
+    <div class="subtitle">{{ subtitle }}</div>
+    {% block extra_lines %}{% endblock %}
+
+    <table class="info">
+        <tr><th colspan="2">ИНФОРМАЦИЯ О ПАЦИЕНТЕ / BEMOR MA'LUMOTLARI</th></tr>
+        <tr><td class="label">Ф.И.О / F.I.SH</td><td>{{ full_name }}</td></tr>
+        <tr><td class="label">Дата рождения / Tug'ilgan sanasi</td><td>{{ birth_date }}</td></tr>
+        <tr><td class="label">Дата регистрации / Ro'yxatga olish sanasi</td><td>{{ registration_date }}</td></tr>
+        <tr><td class="label">Дата готовности / Tayyorlik sanasi</td><td>{{ ready_date }}</td></tr>
+    </table>
+
+    <table class="results">
+        <tr>
+            <th style="width: 42%;">Наименование / Tahlil nomi</th>
+            <th style="width: 16%;">Результат / Natija</th>
+            <th style="width: 14%;">Ед. изм / Birlik</th>
+            <th style="width: 28%;">Норма / Norma</th>
+        </tr>
+        {% for f in fields %}
+        <tr>
+            <td>{{ f.name }}</td>
+            <td>{{ f.result }}</td>
+            <td>{{ f.unit }}</td>
+            <td>{{ f.norma|safe }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <div class="signature">{% block signature_label %}Лаборант / Laborant{% endblock %}: _______________________</div>
+
+    <div class="warning">
+        <strong>ВАЖНО / MUHIM:</strong><br>
+        1. Результаты лабораторных исследований не являются диагнозом и требуют консультации лечащего врача.<br>
+        &nbsp;&nbsp;&nbsp;Laboratoriya tekshiruv natijalari tashxis emas va davolovchi shifokor bilan maslahatlashishni talab qiladi.<br>
+        2. Подделка или изменение результатов влечёт уголовную ответственность по ст. 228 УК РУз.<br>
+        &nbsp;&nbsp;&nbsp;Natijalarni qalbakilashtirish O'zR JK 228-moddasi bo'yicha javobgarlikka sabab bo'ladi.<br>
+        3. Результаты выдаются только пациенту или его законному представителю при наличии удостоверения личности.<br>
+        &nbsp;&nbsp;&nbsp;Natijalar faqat bemor yoki uning qonuniy vakiliga shaxsni tasdiqlovchi hujjat asosida beriladi.
+    </div>
+
+    <div class="footer-meta">@ortopediya_markazi &middot; Hujjat Respublika bolalar ortopediya markazi tizimi tomonidan avtomatik generatsiya qilingan &middot; {{ generated_at }}</div>
+</body>
+</html>

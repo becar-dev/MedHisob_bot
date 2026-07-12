@@ -1,0 +1,19 @@
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @BolalarOrtopediyaBot id=8512551654 - 'Respublika bolalar ortopediya markazi'
+INFO:aiogram.event:Update id=377139753 is handled. Duration 380 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139754 is handled. Duration 428 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139755 is handled. Duration 131 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139756 is handled. Duration 164 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139757 is handled. Duration 129 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139758 is handled. Duration 140 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139759 is handled. Duration 131 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139760 is handled. Duration 138 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139761 is handled. Duration 131 ms by bot id=8512551654
+INFO:weasyprint.progress:Step 1 - Fetching and parsing HTML - HTML string
+INFO:weasyprint.progress:Step 2 - Fetching and parsing CSS - CSS string
+INFO:weasyprint.progress:Step 3 - Applying CSS
+INFO:weasyprint.progress:Step 4 - Creating formatting structure
+INFO:weasyprint.progress:Step 5 - Creating layout - Page 1
+INFO:weasyprint.progress:Step 6 - Creating PDF
+INFO:weasyprint.progress:Step 7 - Adding PDF metadata
+INFO:aiogram.event:Update id=377139762 is handled. Duration 1550 ms by bot id=8512551654

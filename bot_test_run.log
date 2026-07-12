@@ -1,0 +1,38 @@
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @BolalarOrtopediyaBot id=8512551654 - 'Respublika bolalar ortopediya markazi'
+INFO:aiogram.event:Update id=377139763 is handled. Duration 382 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139764 is handled. Duration 213 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139765 is handled. Duration 398 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139766 is handled. Duration 133 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139767 is handled. Duration 170 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139768 is handled. Duration 154 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139769 is handled. Duration 138 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139770 is handled. Duration 129 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139771 is handled. Duration 143 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139772 is handled. Duration 182 ms by bot id=8512551654
+INFO:weasyprint.progress:Step 1 - Fetching and parsing HTML - HTML string
+INFO:weasyprint.progress:Step 2 - Fetching and parsing CSS - CSS string
+INFO:weasyprint.progress:Step 3 - Applying CSS
+INFO:weasyprint.progress:Step 4 - Creating formatting structure
+INFO:weasyprint.progress:Step 5 - Creating layout - Page 1
+INFO:weasyprint.progress:Step 6 - Creating PDF
+INFO:weasyprint.progress:Step 7 - Adding PDF metadata
+INFO:aiogram.event:Update id=377139773 is handled. Duration 1737 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139774 is handled. Duration 439 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139775 is handled. Duration 347 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139776 is handled. Duration 126 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139777 is handled. Duration 175 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139778 is handled. Duration 127 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139779 is handled. Duration 130 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139780 is handled. Duration 130 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139781 is handled. Duration 124 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139782 is handled. Duration 125 ms by bot id=8512551654
+INFO:weasyprint.progress:Step 1 - Fetching and parsing HTML - HTML string
+INFO:weasyprint.progress:Step 2 - Fetching and parsing CSS - CSS string
+INFO:weasyprint.progress:Step 3 - Applying CSS
+INFO:weasyprint.progress:Step 4 - Creating formatting structure
+INFO:weasyprint.progress:Step 5 - Creating layout - Page 1
+INFO:weasyprint.progress:Step 6 - Creating PDF
+INFO:weasyprint.progress:Step 7 - Adding PDF metadata
+INFO:aiogram.event:Update id=377139783 is handled. Duration 1651 ms by bot id=8512551654
+INFO:aiogram.event:Update id=377139784 is handled. Duration 346 ms by bot id=8512551654
